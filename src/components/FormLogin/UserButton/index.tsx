@@ -10,8 +10,8 @@ export function UserButton() {
   const router = useRouter();
 
   function handleLogout() {
-    destroyCookie(undefined, "pombal.token");
-    destroyCookie(undefined, "pombal.user");
+    destroyCookie({}, "pombal.token", { path: "/" });
+    destroyCookie({}, "pombal.user", { path: "/" });
     setUser(undefined);
     router.push("/");
   }
@@ -20,9 +20,11 @@ export function UserButton() {
     <>
       {user ? (
         <div className="w-max flex gap-2 items-start">
-          <h2 className="text-xs sm:text-sm after:content-['|'] after:pl-2">
-            Olá, {user.name}
-          </h2>
+          <Link href={`/user/profile/${user.id}`}>
+            <h2 className="text-xs sm:text-sm after:content-['|'] after:pl-2">
+              Olá, {user.name}
+            </h2>
+          </Link>
           <button
             onClick={handleLogout}
             type="button"

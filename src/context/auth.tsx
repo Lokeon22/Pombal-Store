@@ -50,17 +50,19 @@ export const AuthProvider = ({ children }: authProviderProps) => {
       return alert("Email e/ou senha incorretos");
     }
 
-    setCookie(undefined, "pombal.token", token, {
-      maxAge: 60 * 60 * 6, // 6 hours
-    });
+    if (res.ok) {
+      setCookie({ res }, "pombal.token", token, {
+        maxAge: 60 * 60 * 6, // 6 hours
+        path: "/",
+      });
 
-    setCookie(undefined, "pombal.user", JSON.stringify({ user }), {
-      maxAge: 60 * 60 * 6,
-    });
+      setCookie({ res }, "pombal.user", JSON.stringify({ user }), {
+        maxAge: 60 * 60 * 6,
+        path: "/",
+      });
 
-    setUser(user.user);
+      setUser(user.user);
 
-    if (user) {
       const win: Window = window;
       win.location = "/";
     }

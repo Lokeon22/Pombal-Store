@@ -27,7 +27,7 @@ export default async function Home() {
   const { products } = await getProducts();
 
   return (
-    <main className="w-full h-full max-w-[1300px] mx-auto my-0">
+    <main className="w-full h-full max-w-[1300px] mx-auto my-0 animate-changeOpDire">
       <Image
         width={1500}
         height={500}

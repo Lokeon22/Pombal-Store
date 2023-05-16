@@ -62,7 +62,7 @@ export default async function ProductDetails({
   const { price } = await getPrice();
 
   return (
-    <main className="w-full h-full max-w-[1300px] mx-auto my-0 text-white px-2 2xl:px-4 py-5">
+    <main className="w-full h-full max-w-[1300px] mx-auto my-0 text-white px-2 2xl:px-4 py-5 animate-changeOpDire">
       <NavigationCategory
         params={product}
         details={true}

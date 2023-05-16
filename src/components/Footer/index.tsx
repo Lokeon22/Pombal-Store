@@ -17,7 +17,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="w-full h-full border-t-4 border-blue-400 mt-10">
+    <footer className="w-full h-full border-t-4 border-blue-400 mt-5 sm:mt-10">
       <section className="max-w-[1300px] grid grid-cols-1 md:grid-cols-4 mx-auto my-0 py-3 lg:py-10 px-2 lg:px-4">
         <div className="col-span-1 md:col-span-2">
           <h3 className="font-semibold uppercase text-sm mb-3 py-4 md:py-0 border-b-2 md:border-b-0">

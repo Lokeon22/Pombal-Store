@@ -19,7 +19,12 @@ export function FormRegister() {
       return alert("Email já existe");
     }
 
-    alert("Conta criada");
+    if (res.ok) {
+      alert("Conta criada");
+      setName("");
+      setEmail("");
+      setPassword("");
+    }
   }
 
   return (

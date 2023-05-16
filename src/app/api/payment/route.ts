@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
       },
     ],
     mode: "payment",
-    success_url: process.env.STRIPE_SUCCESS_URL as string,
+    success_url: `http://localhost:3000/user/profile/${data.user.id}`,
     cancel_url: process.env.STRIPE_CANCEL_URL,
   });
 
