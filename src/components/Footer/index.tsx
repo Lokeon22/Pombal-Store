@@ -62,19 +62,21 @@ export function Footer() {
             ref={informacao}
           >
             <li className="hover:text-blue-400 hover:duration-300">
-              <Link href={"/faq"}>FAQ Perguntas Frequentes</Link>
+              <Link href={"/informacoes/faq"}>FAQ Perguntas Frequentes</Link>
             </li>
             <li className="hover:text-blue-400 hover:duration-300">
-              Política de Privacidade
+              <Link href={"/informacoes/politicaprivacidade"}>
+                Política de Privacidade
+              </Link>
             </li>
             <li className="hover:text-blue-400 hover:duration-300">
-              Política de Reembolso
+              <Link href={"/informacoes/reembolso"}>Política de Reembolso</Link>
             </li>
             <li className="hover:text-blue-400 hover:duration-300">
-              Trocas e Devoluções
+              <Link href={"/informacoes/trocas"}>Trocas e Devoluções</Link>
             </li>
             <li className="hover:text-blue-400 hover:duration-300">
-              Entre em contato
+              <Link href={"/informacoes/aviso"}>Aviso Legal</Link>
             </li>
           </ul>
         </nav>

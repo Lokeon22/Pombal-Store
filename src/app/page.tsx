@@ -103,7 +103,7 @@ export default async function Home() {
           ))}
       </Carousel>
 
-      <Link className="w-max" href={"/faq"}>
+      <Link className="w-max" href={"/informacoes/faq"}>
         <Image
           width={1200}
           height={200}

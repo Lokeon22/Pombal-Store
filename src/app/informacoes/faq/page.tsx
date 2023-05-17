@@ -1,4 +1,5 @@
 import { FaqList } from "@/components/FaqItem";
+import { PombalStore } from "@/components/PombalMessage";
 
 export default function Faq() {
   return (
@@ -48,12 +49,7 @@ export default function Faq() {
           text="Como trabalhamos com uma logistica de entregas em parceria com os Correios existem algumas variáveis que são incontroláveis, como, 
             problemas em estradas e(ou) rotas de entrega, surtos de vírus e, em situações incontroláveis podem haver alguns atrasos."
         />
-        <li>
-          <span className="text-gray-50">Atenciosamente,</span>
-          <h2 className="text-gray-50 font-medium uppercase mt-1">
-            Equipe Pombal Store.
-          </h2>
-        </li>
+        <PombalStore />
       </ul>
     </main>
   );
