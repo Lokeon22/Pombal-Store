@@ -36,13 +36,16 @@ export const AuthProvider = ({ children }: authProviderProps) => {
   }, []);
 
   async function handleLogin({ email, password }: LoginProps) {
-    const res = await fetch("http://localhost:8080/login", {
-      method: "POST",
-      body: JSON.stringify({ email, password }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_POMBAL_STORE_API}/login`,
+      {
+        method: "POST",
+        body: JSON.stringify({ email, password }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     const { user, token } = await res.json();
 

@@ -7,8 +7,6 @@ interface CardProps {
   product: ProductsProps;
 }
 
-const baseURL = "http://localhost:8080";
-
 export function Card({ product }: CardProps) {
   return (
     <div className="min-w-[200px] sm:min-w-[250px] bg-white text-black p-4 rounded-xl cursor-pointer hover:brightness-95 hover:duration-300">
@@ -17,9 +15,11 @@ export function Card({ product }: CardProps) {
           width={225}
           height={225}
           style={{ borderRadius: "12px" }}
-          src={`${baseURL}/files/${product.image}`}
+          src={`${process.env.NEXT_PUBLIC_POMBAL_STORE_API}/files/${product.image}`}
           alt="carrinho"
           priority
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNcvmhRPQAGTwJs6OQmwAAAAABJRU5ErkJggg=="
         />
         <p className="my-1 text-base sm:text-lg font-semibold truncate">
           {product.name}

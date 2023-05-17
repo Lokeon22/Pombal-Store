@@ -2,15 +2,13 @@ import { ProductsProps } from "@/types/Products";
 import { PriceFilter } from "@/components/PriceFilter";
 import { NavigationCategory } from "@/components/NavigationCategory";
 
-const baseURL = "http://localhost:8080";
-
 async function generateStaticParams({
   params: { name },
 }: {
   params: { name: string };
 }) {
   const products: ProductsProps[] = await fetch(
-    `${baseURL}/allproducts?category=${name}`,
+    `${process.env.NEXT_PUBLIC_POMBAL_STORE_API}/allproducts?category=${name}`,
     {
       next: { revalidate: 60 * 60 * 24 },
     }

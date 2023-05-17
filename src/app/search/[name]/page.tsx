@@ -2,16 +2,17 @@ import { ProductsProps } from "@/types/Products";
 import { NavigationCategory } from "@/components/NavigationCategory";
 import { PriceFilter } from "@/components/PriceFilter";
 
-const baseURL = "http://localhost:8080";
-
 async function generateStaticSearch({
   params: { name },
 }: {
   params: { name: string };
 }) {
-  const products: ProductsProps[] = await fetch(`${baseURL}/allproducts`, {
-    next: { revalidate: 60 * 60 * 24 },
-  })
+  const products: ProductsProps[] = await fetch(
+    `${process.env.NEXT_PUBLIC_POMBAL_STORE_API}/allproducts`,
+    {
+      next: { revalidate: 60 * 60 * 24 },
+    }
+  )
     .then((res) => res.json())
     .catch((e) => console.log(e));
 

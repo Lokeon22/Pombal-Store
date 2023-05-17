@@ -23,8 +23,6 @@ export function PriceFilter({
     setSelectValue(value);
   };
 
-  const baseURL = "http://localhost:8080";
-
   return (
     <>
       <div className="flex flex-wrap gap-2 sm:gap-0 items-center justify-between mb-5 border-b-4 pb-0.5 ">
@@ -58,9 +56,11 @@ export function PriceFilter({
                   width={300}
                   height={300}
                   style={{ borderRadius: "12px" }}
-                  src={`${baseURL}/files/${product.image}`}
+                  src={`${process.env.NEXT_PUBLIC_POMBAL_STORE_API}/files/${product.image}`}
                   alt="carrinho"
                   priority
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNcvmhRPQAGTwJs6OQmwAAAAABJRU5ErkJggg=="
                 />
                 <p className="my-1 text-base sm:text-lg font-semibold truncate">
                   {product.name}

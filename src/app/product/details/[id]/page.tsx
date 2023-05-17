@@ -12,7 +12,7 @@ import { BuyButton } from "@/components/BuyButton";
 
 import { StripeProduct } from "../../../../types/Products";
 
-const baseURL = "http://localhost:8080";
+const baseURL = process.env.NEXT_PUBLIC_POMBAL_STORE_API;
 
 async function generateStaticParams({
   params: { id },
@@ -77,7 +77,9 @@ export default async function ProductDetails({
             className="justify-self-center"
             src={`${baseURL}/files/${product.image}`}
             alt={product.name}
-            priority
+            priority={true}
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNcvmhRPQAGTwJs6OQmwAAAAABJRU5ErkJggg=="
           />
         </div>
         <div className="flex flex-col gap-2 text-black bg-white p-5 sm:p-10 rounded-none sm:rounded-xl">

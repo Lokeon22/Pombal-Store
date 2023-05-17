@@ -1,4 +1,5 @@
 import { FaqList } from "@/components/FaqItem";
+import { PombalStore } from "@/components/PombalMessage";
 
 export default function Faq() {
   return (
@@ -17,12 +18,7 @@ export default function Faq() {
         aspecto ou função deste site, inclusive o aviso legal e de privacidade, sendo que tais modificações entrarão em vigor imediatamente
         após a postagem do aspecto ou função modificada deste site ou do aviso legal e de privacidade modificado."
         />
-        <li>
-          <span className="text-gray-50">Atenciosamente,</span>
-          <h2 className="text-gray-50 font-medium uppercase mt-1">
-            Equipe Pombal Store.
-          </h2>
-        </li>
+        <PombalStore />
       </ul>
     </main>
   );

@@ -15,9 +15,12 @@ import { CategoryContainer } from "@/components/CategoryContainer";
 import Link from "next/link";
 
 async function getProducts() {
-  const res = await fetch("http://localhost:8080/allproducts", {
-    next: { revalidate: 60 * 60 * 24 },
-  });
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_POMBAL_STORE_API}/allproducts`,
+    {
+      next: { revalidate: 60 * 60 * 24 },
+    }
+  );
   const products: ProductsProps[] = await res.json();
 
   return { products };

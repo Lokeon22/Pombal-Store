@@ -7,13 +7,16 @@ export function FormRegister() {
   const [password, setPassword] = useState("");
 
   async function handleRegister() {
-    const res = await fetch("http://localhost:8080/users/create", {
-      method: "POST",
-      body: JSON.stringify({ name, email, password }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_POMBAL_STORE_API}/users/create`,
+      {
+        method: "POST",
+        body: JSON.stringify({ name, email, password }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     if (!res.ok) {
       return alert("Email já existe");
