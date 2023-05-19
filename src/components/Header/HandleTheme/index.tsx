@@ -3,19 +3,19 @@ import { useState, useEffect } from "react";
 import { CiDark, CiBrightnessDown } from "react-icons/ci";
 
 export function HandleTheme() {
-  const [theme, setTheme] = useState(
-    (typeof window !== "undefined" && localStorage.getItem("pombal.theme")) ||
-      "light"
-  );
+  const [theme, setTheme] = useState<string | null>("light");
 
   useEffect(() => {
-    theme === "dark"
+    const getItem = localStorage.getItem("pombal.theme");
+    getItem === null && localStorage.setItem("pombal.theme", theme as string);
+    getItem === "dark"
       ? document.documentElement.classList.add("dark")
       : document.documentElement.classList.remove("dark");
+    setTheme(getItem);
   }, [theme]);
 
   function handleThemeSwitch() {
-    const verify = theme === "dark" ? "light" : "dark";
+    const verify = theme === "dark" ? "light" : "dark"; //remove delay
     setTheme(verify);
     localStorage.setItem("pombal.theme", verify);
   }
