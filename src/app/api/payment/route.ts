@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
       },
     ],
     mode: "payment",
-    success_url: `http://localhost:3000/user/profile/${data.user.id}`,
+    success_url: `https://pombal-store.vercel.app/user/profile/${data.user.id}`,
     cancel_url: process.env.STRIPE_CANCEL_URL,
   });
 

@@ -32,9 +32,12 @@ async function generateStaticParams({
 }
 
 async function getPrice() {
-  const res = await fetch("http://localhost:3000/api/getproducts", {
-    next: { revalidate: 60 * 60 * 24 },
-  });
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_POMBAL_STORE_VERCEL}/api/getproducts`,
+    {
+      next: { revalidate: 60 * 60 * 24 },
+    }
+  );
 
   const price: StripeProduct[] = await res.json();
 

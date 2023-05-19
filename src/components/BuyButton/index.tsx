@@ -28,16 +28,19 @@ export function BuyButton({ product, id }: BuyProps) {
     }
 
     if (isAuthenticated) {
-      const res: string = await fetch("http://localhost:3000/api/payment", {
-        method: "POST",
-        body: JSON.stringify({
-          user: user,
-          priceId: stripe_product_id,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }).then((res) => res.json());
+      const res: string = await fetch(
+        `${process.env.NEXT_PUBLIC_POMBAL_STORE_VERCEL}/api/payment`,
+        {
+          method: "POST",
+          body: JSON.stringify({
+            user: user,
+            priceId: stripe_product_id,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      ).then((res) => res.json());
 
       window.location.assign(res);
     } else {
