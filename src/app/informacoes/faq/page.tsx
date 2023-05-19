@@ -3,7 +3,7 @@ import { PombalStore } from "@/components/PombalMessage";
 
 export default function Faq() {
   return (
-    <main className="w-full h-full max-w-[800px] mx-auto my-0 text-white px-2 2xl:px-4 py-5 animate-modifyScale">
+    <main className="w-full h-full max-w-[800px] mx-auto my-0 text-black dark:text-white px-2 2xl:px-4 py-5 animate-modifyScale">
       <h2 className="text-center text-2xl font-medium">
         FAQ Perguntas Frequentes
       </h2>

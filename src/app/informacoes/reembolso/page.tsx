@@ -2,11 +2,11 @@ import { PombalStore } from "@/components/PombalMessage";
 
 export default function Reembolso() {
   return (
-    <main className="w-full h-full max-w-[800px] mx-auto my-0 text-white px-2 2xl:px-4 py-5 animate-modifyScale">
+    <main className="w-full h-full max-w-[800px] mx-auto my-0 text-black dark:text-white px-2 2xl:px-4 py-5 animate-modifyScale">
       <h2 className="text-center text-2xl font-medium">
         Política de Reembolso
       </h2>
-      <ul className="flex flex-col gap-4 mt-10 text-gray-300">
+      <ul className="flex flex-col gap-4 mt-10 text-gray-800 dark:text-gray-300">
         <li>
           <span>
             Nossa política de trocas dos produtos visa proporcionar ao cliente

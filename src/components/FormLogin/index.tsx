@@ -21,7 +21,7 @@ export function FormLogin() {
         <div className="flex items-center gap-5">
           <label htmlFor="email">Email</label>
           <input
-            className="w-full px-2 py-1 text-black h-8 outline-none rounded"
+            className="w-full px-2 py-1 text-black h-8 outline-none rounded dark:border-0 border border-blue-300"
             type="text"
             id="email"
             value={email}
@@ -32,7 +32,7 @@ export function FormLogin() {
         <div className="flex items-center gap-4">
           <label htmlFor="password">Senha</label>
           <input
-            className="w-full px-2 py-1 text-black h-8 outline-none rounded"
+            className="w-full px-2 py-1 text-black h-8 outline-none rounded dark:border-0 border border-blue-300"
             type="password"
             id="password"
             value={password}

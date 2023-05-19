@@ -62,14 +62,14 @@ export default async function ProductDetails({
   const { price } = await getPrice();
 
   return (
-    <main className="w-full h-full max-w-[1300px] mx-auto my-0 text-white px-2 2xl:px-4 py-5 animate-changeOpDire">
+    <main className="w-full h-full max-w-[1300px] mx-auto my-0 text-black dark:text-white px-2 2xl:px-4 py-5 animate-changeOpDire">
       <NavigationCategory
         params={product}
         details={true}
         productDetail={product}
       />
       <section className="w-full h-full flex flex-col lg:flex-row gap-0 sm:gap-6 px-0 sm:px-5 md:px-10 lg:px-0">
-        <div className="flex justify-center bg-white p-5 sm:p-10 rounded-none sm:rounded-xl">
+        <div className="flex justify-center bg-white shadow-md p-5 sm:p-10 rounded-none sm:rounded-xl">
           <Image
             width={550}
             height={550}
@@ -82,7 +82,7 @@ export default async function ProductDetails({
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNcvmhRPQAGTwJs6OQmwAAAAABJRU5ErkJggg=="
           />
         </div>
-        <div className="flex flex-col gap-2 text-black bg-white p-5 sm:p-10 rounded-none sm:rounded-xl">
+        <div className="flex flex-col gap-2 text-black shadow-md bg-white p-5 sm:p-10 rounded-none sm:rounded-xl">
           <span className="text-xs text-gray-600">
             Novo | {product.stock_amount * 10} Vendidos
           </span>

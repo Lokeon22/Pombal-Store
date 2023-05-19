@@ -26,7 +26,7 @@ export function MiniCard({
         {social ? (
           <Link
             href={url}
-            className="mt-1 text-green-600 w-max"
+            className="mt-1 text-green-600 w-max hover:brightness-90 hover:duration-300"
             target="_blank"
           >
             {social}

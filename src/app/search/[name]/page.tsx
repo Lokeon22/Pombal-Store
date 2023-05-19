@@ -31,7 +31,7 @@ export default async function Search({ params }: { params: { name: string } }) {
   return (
     <main className="w-full h-full max-w-[1300px] mx-auto my-0 text-white px-2 sm:px-4 py-5 animate-changeOpacity">
       <NavigationCategory params={params} />
-      <section className="w-full h-full bg-gray-50 text-black rounded-2xl py-4 px-2.5 sm:px-5">
+      <section className="w-full h-full bg-gray-50 shadow-lg text-black rounded-2xl pt-4 pb-7 px-2.5 sm:px-5">
         {productsFiltered.length > 0 ? (
           <PriceFilter
             params={params}

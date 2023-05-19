@@ -3,7 +3,7 @@ import { PombalStore } from "@/components/PombalMessage";
 
 export default function PoliticaPrivacidade() {
   return (
-    <main className="w-full h-full max-w-[800px] mx-auto my-0 text-white px-2 2xl:px-4 py-5 animate-modifyScale">
+    <main className="w-full h-full max-w-[800px] mx-auto text-black dark:text-white my-0 px-2 2xl:px-4 py-5 animate-modifyScale">
       <h2 className="text-center text-2xl font-medium">
         Políticas de Privacidade
       </h2>

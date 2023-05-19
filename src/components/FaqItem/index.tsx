@@ -6,8 +6,10 @@ interface FaqListProps {
 export function FaqList({ title, text }: FaqListProps) {
   return (
     <li>
-      <h2 className="text-gray-50 font-medium text-lg">{title}</h2>
-      <p className="text-gray-300 mt-2">{text}</p>
+      <h2 className="text-gray-800 dark:text-gray-50 font-medium text-lg">
+        {title}
+      </h2>
+      <p className="text-gray-600 dark:text-gray-300 mt-2">{text}</p>
     </li>
   );
 }

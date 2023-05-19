@@ -43,7 +43,7 @@ export function FormRegister() {
         <div className="flex items-center gap-3.5">
           <label htmlFor="name">Nome</label>
           <input
-            className="w-full px-2 py-1 text-black h-8 outline-none rounded"
+            className="w-full px-2 py-1 text-black h-8 outline-none rounded dark:border-0 border border-blue-300"
             type="text"
             id="name"
             value={name}
@@ -54,7 +54,7 @@ export function FormRegister() {
         <div className="flex items-center gap-5">
           <label htmlFor="email_register">Email</label>
           <input
-            className="w-full px-2 py-1 text-black h-8 outline-none rounded"
+            className="w-full px-2 py-1 text-black h-8 outline-none rounded dark:border-0 border border-blue-300"
             type="text"
             id="email_register"
             value={email}
@@ -65,7 +65,7 @@ export function FormRegister() {
         <div className="flex items-center gap-3.5">
           <label htmlFor="password_register">Senha</label>
           <input
-            className="w-full px-2 py-1 text-black h-8 outline-none rounded"
+            className="w-full px-2 py-1 text-black h-8 outline-none rounded dark:border-0 border border-blue-300"
             type="password"
             id="password_register"
             value={password}

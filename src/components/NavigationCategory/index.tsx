@@ -16,15 +16,15 @@ export function NavigationCategory({
 }: NavigationCategorProps) {
   return (
     <nav className="mb-0 sm:mb-5">
-      <ul className="hidden sm:flex items-center gap-1 text-sm text-gray-300">
-        <li className="hover:text-blue-400 hover:duration-300">
+      <ul className="hidden sm:flex items-center gap-1 text-sm text-gray-700 dark:text-gray-300">
+        <li className="hover:text-blue-600 dark:hover:text-blue-400 hover:duration-300">
           <Link href={"/"}>Página inicial</Link>
         </li>
         {details && productDetail && (
           <li>
             {"> "}
             <Link
-              className="hover:text-blue-400 hover:duration-300"
+              className="hover:text-blue-600 dark:hover:text-blue-400 hover:duration-300"
               href={`/collections/${productDetail.category}`}
             >
               {productDetail.category}

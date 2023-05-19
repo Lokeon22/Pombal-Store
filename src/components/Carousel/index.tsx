@@ -22,7 +22,7 @@ export const Carousel = ({ children }: CarouselProps) => {
   return (
     <section className="flex justify-center items-center mx-auto my-0 gap-4 px-1">
       <button
-        className="hidden md:block p-1 hover:bg-blue-400 hover:bg-opacity-90 hover:duration-300 hover:rounded-full"
+        className="hidden md:block p-1 hover:text-white hover:bg-blue-400 hover:bg-opacity-90 hover:duration-300 hover:rounded-full"
         onClick={previusSlide}
       >
         <AiOutlineLeft size={32} />
@@ -34,7 +34,7 @@ export const Carousel = ({ children }: CarouselProps) => {
         {children}
       </div>
       <button
-        className="hidden md:block p-1 hover:bg-blue-400 hover:bg-opacity-90 hover:duration-300 hover:rounded-full"
+        className="hidden md:block p-1 hover:text-white hover:bg-blue-400 hover:bg-opacity-90 hover:duration-300 hover:rounded-full"
         onClick={nextSlide}
       >
         <AiOutlineLeft size={32} className="rotate-180" />

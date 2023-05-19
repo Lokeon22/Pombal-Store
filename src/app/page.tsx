@@ -54,7 +54,7 @@ export default async function Home() {
       </Carousel>
 
       <section className="max-w-[1200px] mx-auto my-0 px-2 md:px-0 py-4 lg:py-5 grid grid-cols-1 md:grid-cols-3 lg:gap-2 bg-gradient-blue rounded-lg mt-10 mb-10">
-        <div className="ml-2 md:ml-6 col-span-1">
+        <div className="ml-2 md:ml-6 col-span-1 text-white">
           <h2 className="mt-0 md:mt-4 mb-4 text-lg md:text-2xl">
             O melhor para sua Casa
           </h2>
@@ -68,7 +68,7 @@ export default async function Home() {
             <Link href={`/collections/Casa`}>Ver mais produtos</Link>
           </button>
         </div>
-        <div className="col-span-2">
+        <div className="col-span-2 [&>*:nth-child(1)]:text-white">
           <Carousel>
             {products
               .filter((pro) => pro.category === "Casa")

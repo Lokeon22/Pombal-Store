@@ -13,30 +13,36 @@ export function UserDetails({ data }: VerifyCustomerProps) {
 
   return (
     <>
-      <div className="flex flex-col gap-3">
-        <h2 className="text-2xl text-blue-300">Meus dados</h2>
+      <div className="flex flex-col gap-3 text-gray-600 dark:text-gray-100 font-semibold">
+        <h2 className="text-2xl text-blue-400 dark:text-blue-300 font-normal">
+          Meus dados
+        </h2>
         {!user && <h2>Carregando dados...</h2>}
         {user && (
           <>
-            <h2 className="font-semibold text-gray-100">
+            <h2>
               Nome:{" "}
-              <span className="font-normal text-gray-200">{user.name}</span>{" "}
+              <span className="font-normal text-gray-500 dark:text-gray-200">
+                {user.name}
+              </span>{" "}
             </h2>
-            <h2 className="font-semibold text-gray-100">
+            <h2>
               Email:{" "}
-              <span className="font-normal text-gray-200">{user.email}</span>
+              <span className="font-normal text-gray-500 dark:text-gray-200">
+                {user.email}
+              </span>
             </h2>
-            <h2 className="font-semibold text-gray-100">
+            <h2>
               Entrou em:{" "}
-              <span className="font-normal text-gray-200">
+              <span className="font-normal text-gray-500 dark:text-gray-200">
                 {Intl.DateTimeFormat("pt-BR").format(new Date(user.created_at))}
               </span>
             </h2>
           </>
         )}
       </div>
-      <div className="flex flex-col gap-3">
-        <h2 className="text-2xl text-blue-300">Compras</h2>
+      <div className="flex flex-col gap-3 text-gray-600 dark:text-white">
+        <h2 className="text-2xl text-blue-400 dark:text-blue-300">Compras</h2>
         {customerFiltered.length <= 0 ? (
           <>
             <p>

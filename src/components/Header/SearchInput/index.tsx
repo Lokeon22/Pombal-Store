@@ -11,7 +11,7 @@ export function SearchInput() {
   const input = useRef<HTMLInputElement>(null);
 
   return (
-    <div className="w-full max-w-3xl flex items-center px-1 sm:px-2 h-10 bg-white text-black rounded mx-auto my-0">
+    <div className="w-full max-w-3xl border border-blue-400 dark:border-0 flex items-center px-1 sm:px-2 h-10 bg-white text-black rounded mx-auto my-0">
       <AiOutlineSearch className="w-5 h-5 cursor-pointer" />
       <input
         onKeyDown={(e) => {

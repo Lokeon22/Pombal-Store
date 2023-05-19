@@ -90,12 +90,12 @@ export function Footer() {
           </p>
           <div className="flex flex-col gap-3">
             <input
-              className="h-10 px-2 text-black rounded outline-none"
+              className="h-10 px-2 text-black rounded outline-none border border-blue-200 dark:border-none"
               type="text"
               placeholder="Seu e-mail"
             />
             <button
-              className="px-2 py-2 bg-green-600 rounded hover:brightness-75 hover:duration-300"
+              className="px-2 py-2 bg-green-600 rounded hover:brightness-90 dark:hover:brightness-75 hover:duration-300 text-white"
               type="submit"
             >
               Enviar
