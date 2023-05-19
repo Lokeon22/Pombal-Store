@@ -4,6 +4,7 @@ import { SearchInput } from "./SearchInput";
 
 import { Menu } from "../Menu";
 import { UserButton } from "../FormLogin/UserButton";
+import { HandleTheme } from "./HandleTheme";
 
 export default function Header() {
   return (
@@ -24,7 +25,8 @@ export default function Header() {
 
           <SearchInput />
 
-          <nav className="w-max">
+          <nav className="w-max flex items-center gap-1 sm:gap-2">
+            <HandleTheme />
             <UserButton />
           </nav>
         </div>

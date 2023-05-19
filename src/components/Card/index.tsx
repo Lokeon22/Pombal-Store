@@ -9,7 +9,7 @@ interface CardProps {
 
 export function Card({ product }: CardProps) {
   return (
-    <div className="min-w-[200px] sm:min-w-[250px] bg-white text-black p-4 rounded-xl cursor-pointer hover:brightness-95 hover:duration-300">
+    <div className="min-w-[200px] sm:min-w-[250px] bg-white text-black p-4 rounded-xl cursor-pointer hover:brightness-[0.87] hover:duration-300">
       <Link href={`/product/details/${product.id}`}>
         <Image
           width={225}

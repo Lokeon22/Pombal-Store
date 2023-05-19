@@ -5,6 +5,7 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       animation: {
@@ -32,6 +33,9 @@ module.exports = {
           "100%": { opacity: "1", transform: "translateX(0px)" },
           "0%": { opacity: "0", transform: "translateX(-50px)" },
         },
+      },
+      fontFamily: {
+        roboto: ["var(--font-roboto)"],
       },
     },
   },

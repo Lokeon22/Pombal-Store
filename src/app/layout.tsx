@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Roboto } from "next/font/google";
 
 import { AuthProvider } from "@/context/auth";
 import Header from "@/components/Header";
@@ -8,6 +9,12 @@ export const metadata = {
   title: "Pombal Store",
 };
 
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-roboto",
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -15,7 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-black text-white">
+      <body
+        className={`${roboto.variable} font-roboto bg-gray-100 text-black dark:bg-black dark:text-white duration-300`}
+      >
         <AuthProvider>
           <Header />
           {children}
